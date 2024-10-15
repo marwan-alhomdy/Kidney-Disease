@@ -1,4 +1,4 @@
-# dengue_fever
+# Diagnosis of Kidney Diseases 
 
 A new Flutter project.
 
