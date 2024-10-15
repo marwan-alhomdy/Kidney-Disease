@@ -1,5 +1,5 @@
-import 'package:dengue_fever/core/Animation/animation_column_widget.dart';
-import 'package:dengue_fever/core/constant/image.dart';
+import 'package:kidney_disease/core/Animation/animation_column_widget.dart';
+import 'package:kidney_disease/core/constant/image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -602,8 +602,8 @@ class _CheckupViewState extends State<CheckupView> {
 
 
 // import 'package:flutter/material.dart';
-// import 'package:dengue_fever/core/Animation/animation_column_widget.dart';
-// import 'package:dengue_fever/core/constant/image.dart';
+// import 'package:kidney_disease/core/Animation/animation_column_widget.dart';
+// import 'package:kidney_disease/core/constant/image.dart';
 // import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 

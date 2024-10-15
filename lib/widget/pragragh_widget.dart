@@ -1,4 +1,4 @@
-import 'package:dengue_fever/core/constant/colors.dart';
+import 'package:kidney_disease/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

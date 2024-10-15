@@ -1,6 +1,6 @@
-import 'package:dengue_fever/core/constant/colors.dart';
-import 'package:dengue_fever/core/utils/style_text.dart';
-import 'package:dengue_fever/view/home_view.dart';
+import 'package:kidney_disease/core/constant/colors.dart';
+import 'package:kidney_disease/core/utils/style_text.dart';
+import 'package:kidney_disease/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:get/get.dart';

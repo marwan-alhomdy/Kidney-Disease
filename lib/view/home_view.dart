@@ -1,8 +1,8 @@
-import 'package:dengue_fever/core/constant/image.dart';
-import 'package:dengue_fever/view/prevention_view.dart';
-import 'package:dengue_fever/view/symptoms_view.dart';
-import 'package:dengue_fever/view/treatment_view.dart';
-import 'package:dengue_fever/widget/home/button_widget.dart';
+import 'package:kidney_disease/core/constant/image.dart';
+import 'package:kidney_disease/view/prevention_view.dart';
+import 'package:kidney_disease/view/symptoms_view.dart';
+import 'package:kidney_disease/view/treatment_view.dart';
+import 'package:kidney_disease/widget/home/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../core/Animation/animation_scale_widget.dart';
