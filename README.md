@@ -1,4 +1,4 @@
-# dengue_fever
+# Kidney Diagnosis App
 
 A new Flutter project.
 

@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import 'core/locale/data_locale_translation.dart';
 import 'core/locale/locale_controller.dart';
 import 'helper/cache_helper.dart';
+import 'view/checkup_view2.dart';
 import 'view/home_view.dart';
 
 void main() async {

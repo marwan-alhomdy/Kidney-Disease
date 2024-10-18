@@ -4,6 +4,10 @@ class DataLoacleTranslations extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         "ar": {
+          "Yes": "نـعـم",
+          "No": "لأ",
+          "Next": "التالي",
+
           "Dengue fever": "حمى الضنك",
           "Kideny Disease": "مرض الكلى",
           "abuot":
@@ -130,6 +134,9 @@ class DataLoacleTranslations extends Translations {
 """
         },
         "en": {
+          "Yes": "Yes",
+          "No": "No",
+          "Next": "Next",
           "Dengue fever": "Dengue Fever",
           "Kideny Disease": "Kideny Disease",
           "Checkup": "Checkup",

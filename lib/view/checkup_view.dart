@@ -3,9 +3,11 @@ import 'package:kidney_disease/core/constant/image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../core/constant/cache.dart';
 import '../core/constant/colors.dart';
 import '../core/utils/style_text.dart';
 import '../controller/tree.dart';
+import '../helper/cache_helper.dart';
 import '../widget/checkup/button_checkup_widget.dart';
 
 class CheckupView extends StatefulWidget {
@@ -18,6 +20,114 @@ class CheckupView extends StatefulWidget {
 }
 
 class _CheckupViewState extends State<CheckupView> {
+  final kidneyDiagnosisTree = KidneyDiagnosisTree();
+  int indexPage = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          backgroundColor: scecondaryColor,
+          foregroundColor: Colors.white,
+          title: Text(
+            TypeImage.CHECKUP.name.tr,
+            style: mainTextStyle.copyWith(
+              color: Colors.white,
+            ),
+          ),
+          centerTitle: true),
+      body: SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: (indexPage == kidneyDiagnosisTree.treeDengue.length)
+              ? getReuslt(kidneyDiagnosisTree)
+              : AnimationColumnWidget(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 20),
+                    Center(
+                      child: Image.asset("assets/icons/examination.png",
+                          width: 120, height: 120, fit: BoxFit.fill),
+                    ),
+                    const SizedBox(height: 20),
+                    Text(
+                      kidneyDiagnosisTree.treeDengue[indexPage][0]
+                          .toString()
+                          .tr,
+                      style: mainTextStyle.copyWith(fontSize: 18),
+                    ),
+                    RadioListTile(
+                      title: Text("Yes".tr, style: mainTextStyle),
+                      value: true,
+                      groupValue: kidneyDiagnosisTree
+                          .tree[kidneyDiagnosisTree.treeDengue[indexPage][0]],
+                      onChanged: (value) => setState(() {
+                        kidneyDiagnosisTree.tree[kidneyDiagnosisTree
+                            .treeDengue[indexPage][0]] = value;
+                      }),
+                    ),
+                    RadioListTile(
+                      title: Text("No".tr, style: mainTextStyle),
+                      value: false,
+                      groupValue: kidneyDiagnosisTree
+                          .tree[kidneyDiagnosisTree.treeDengue[indexPage][0]],
+                      onChanged: (value) => setState(() {
+                        kidneyDiagnosisTree.tree[kidneyDiagnosisTree
+                            .treeDengue[indexPage][0]] = value;
+                      }),
+                    ),
+                    ElevatedButton(
+                      onPressed: (kidneyDiagnosisTree.tree[kidneyDiagnosisTree
+                                  .treeDengue[indexPage][0]] ==
+                              null)
+                          ? () {}
+                          : () => setState(() => indexPage++),
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                      ),
+                      child:
+                          Text('Next'.tr, style: const TextStyle(fontSize: 18)),
+                    ),
+                  ],
+                ),
+        ),
+      ),
+    );
+  }
+
+  Widget getReuslt(KidneyDiagnosisTree treeDengue) {
+    final statusDengue = treeDengue.diagnose();
+    final reuslt = (CacheHelper.getString(LANGUAGE) == 'ar')
+        ? statusDengue.arabicTitle
+        : statusDengue.title;
+
+    return Column(
+      children: [
+        Text(
+          "Types of Dengue fever".tr.toUpperCase(),
+          style: mainTextStyle.copyWith(fontSize: 20),
+        ),
+        Image.asset(
+          "assets/icons/dengue2.png",
+          color: statusDengue.color,
+        ),
+        Text(reuslt, style: mainTextStyle),
+        const SizedBox(height: 20)
+      ],
+    );
+  }
+}
+
+class CheckupView2 extends StatefulWidget {
+  static const routeName = "/CheckupView";
+
+  const CheckupView2({super.key});
+
+  @override
+  State<CheckupView2> createState() => _CheckupViewState2();
+}
+
+class _CheckupViewState2 extends State<CheckupView2> {
   final kidneyDiagnosisTree = KidneyDiagnosisTree();
   @override
   Widget build(BuildContext context) {
@@ -597,9 +707,6 @@ class _CheckupViewState extends State<CheckupView> {
 //     }
 //   }
 // }
-
-
-
 
 // import 'package:flutter/material.dart';
 // import 'package:kidney_disease/core/Animation/animation_column_widget.dart';
