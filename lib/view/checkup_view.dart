@@ -9,6 +9,7 @@ import '../core/utils/style_text.dart';
 import '../controller/tree.dart';
 import '../helper/cache_helper.dart';
 import '../widget/checkup/button_checkup_widget.dart';
+import 'prevention_view.dart';
 
 class CheckupView extends StatefulWidget {
   static const routeName = "/CheckupView";
@@ -26,14 +27,7 @@ class _CheckupViewState extends State<CheckupView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: scecondaryColor,
-          foregroundColor: Colors.white,
-          title: Text(
-            TypeImage.CHECKUP.name.tr,
-            style: mainTextStyle.copyWith(
-              color: Colors.white,
-            ),
-          ),
+          title: Text(TypeImage.CHECKUP.name.tr, style: mainTextStyle),
           centerTitle: true),
       body: SizedBox(
         width: double.infinity,
@@ -85,8 +79,7 @@ class _CheckupViewState extends State<CheckupView> {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                       ),
-                      child:
-                          Text('Next'.tr, style: const TextStyle(fontSize: 18)),
+                      child: Text('Next'.tr, style: mainTextStyle),
                     ),
                   ],
                 ),
@@ -112,7 +105,18 @@ class _CheckupViewState extends State<CheckupView> {
           color: statusDengue.color,
         ),
         Text(reuslt, style: mainTextStyle),
-        const SizedBox(height: 20)
+        const SizedBox(height: 10),
+        Text("Please visit a specialist doctor.".tr, style: mainTextStyle),
+        const SizedBox(height: 10),
+        ElevatedButton(
+          onPressed: () {
+            Get.to(() => const PreventionView());
+          },
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+          ),
+          child: Text("Prevention".tr, style: mainTextStyle),
+        ),
       ],
     );
   }
@@ -133,14 +137,7 @@ class _CheckupViewState2 extends State<CheckupView2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: scecondaryColor,
-          foregroundColor: Colors.white,
-          title: Text(
-            TypeImage.CHECKUP.name.tr,
-            style: mainTextStyle.copyWith(
-              color: Colors.white,
-            ),
-          ),
+          title: Text(TypeImage.CHECKUP.name.tr, style: mainTextStyle),
           centerTitle: true),
       body: SizedBox(
         width: double.infinity,

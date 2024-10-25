@@ -9,7 +9,6 @@ import 'package:get/get.dart';
 import 'core/locale/data_locale_translation.dart';
 import 'core/locale/locale_controller.dart';
 import 'helper/cache_helper.dart';
-import 'view/checkup_view2.dart';
 import 'view/home_view.dart';
 
 void main() async {
@@ -29,6 +28,8 @@ class MyApp extends StatelessWidget {
       home: const SplachView(),
       locale: localeController.initLocale,
       translations: DataLoacleTranslations(),
+      theme:
+          ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink)),
       getPages: [
         GetPage(name: HomeView.routeName, page: () => const HomeView()),
         GetPage(name: CheckupView.routeName, page: () => const CheckupView()),

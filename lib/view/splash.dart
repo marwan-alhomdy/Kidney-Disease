@@ -1,4 +1,3 @@
-import 'package:kidney_disease/core/constant/colors.dart';
 import 'package:kidney_disease/core/utils/style_text.dart';
 import 'package:kidney_disease/view/home_view.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +6,23 @@ import 'package:get/get.dart';
 
 import '../core/Animation/animation_column_widget.dart';
 
-class SplachView extends StatelessWidget {
+class SplachView extends StatefulWidget {
   const SplachView({super.key});
+
+  @override
+  State<SplachView> createState() => SplachViewState();
+}
+
+class SplachViewState extends State<SplachView>
+    with SingleTickerProviderStateMixin {
+  @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(const Duration(seconds: 3), () async {
+      Get.offAllNamed(HomeView.routeName);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -75,49 +89,49 @@ class SplachView extends StatelessWidget {
                     ),
                   ],
                 )),
-            Positioned(
-              right: 20,
-              bottom: 100,
-              child: AnimationConfiguration.staggeredList(
-                  position: 0,
-                  delay: const Duration(milliseconds: 1000),
-                  child: SlideAnimation(
-                      duration: const Duration(milliseconds: 1000),
-                      curve: Curves.easeInCubic,
-                      verticalOffset: 0,
-                      horizontalOffset: 220,
-                      child: ScaleAnimation(
-                          duration: const Duration(milliseconds: 1000),
-                          curve: Curves.fastLinearToSlowEaseIn,
-                          child: FadeInAnimation(
-                              child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.white),
-                                  onPressed: () {
-                                    Get.offAllNamed(HomeView.routeName);
-                                  },
-                                  child: Container(
-                                    width: Get.width * 0.5,
-                                    padding: const EdgeInsets.all(5),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          "Start".tr,
-                                          textAlign: TextAlign.left,
-                                          style: mainTextStyle.copyWith(
-                                              color: mainColor, fontSize: 18),
-                                        ),
-                                        const SizedBox(width: 20),
-                                        const Icon(
-                                          Icons.navigate_next_rounded,
-                                          color: mainColor,
-                                        )
-                                      ],
-                                    ),
-                                  )))))),
-            ),
+            // Positioned(
+            //   right: 20,
+            //   bottom: 100,
+            //   child: AnimationConfiguration.staggeredList(
+            //       position: 0,
+            //       delay: const Duration(milliseconds: 1000),
+            //       child: SlideAnimation(
+            //           duration: const Duration(milliseconds: 1000),
+            //           curve: Curves.easeInCubic,
+            //           verticalOffset: 0,
+            //           horizontalOffset: 220,
+            //           child: ScaleAnimation(
+            //               duration: const Duration(milliseconds: 1000),
+            //               curve: Curves.fastLinearToSlowEaseIn,
+            //               child: FadeInAnimation(
+            //                   child: ElevatedButton(
+            //                       style: ElevatedButton.styleFrom(
+            //                           backgroundColor: Colors.white),
+            //                       onPressed: () {
+            //                         Get.offAllNamed(HomeView.routeName);
+            //                       },
+            //                       child: Container(
+            //                         width: Get.width * 0.5,
+            //                         padding: const EdgeInsets.all(5),
+            //                         child: Row(
+            //                           mainAxisAlignment:
+            //                               MainAxisAlignment.center,
+            //                           children: [
+            //                             Text(
+            //                               "Start".tr,
+            //                               textAlign: TextAlign.left,
+            //                               style: mainTextStyle.copyWith(
+            //                                   color: mainColor, fontSize: 18),
+            //                             ),
+            //                             const SizedBox(width: 20),
+            //                             const Icon(
+            //                               Icons.navigate_next_rounded,
+            //                               color: mainColor,
+            //                             )
+            //                           ],
+            //                         ),
+            //                       )))))),
+            // ),
           ],
         ),
       ),

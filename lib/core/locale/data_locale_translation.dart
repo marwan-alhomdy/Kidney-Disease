@@ -4,6 +4,7 @@ class DataLoacleTranslations extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         "ar": {
+          "Please visit a specialist doctor.": " الرجاء زيارة طبيب مختص ",
           "Yes": "نـعـم",
           "No": "لأ",
           "Next": "التالي",
@@ -121,19 +122,27 @@ class DataLoacleTranslations extends Translations {
 """,
           //!===========Symptoms======
           "SymptomsValue": """
-- عدم وجود كمية كافية من البول
-- انقطاع البول
-- حرقة في المعدة
-- الدم في البول
-- تغير في لون البول
-- ألم في الجانبين
-- انسداد البطن
-- حمى
-- تورم
-- جلد شاحب
+- يتطور مرض الكلى غالبًا دون ظهور أعراض ملحوظة حتى يصل إلى مراحل متقدمة. تشمل الأعراض الشائعة:
+
+- التعب المستمر: تنتج الكلى السليمة إريثروبويتين، وهو هرمون ينتج خلايا الدم الحمراء. عندما تتلف الكلى، تتعطل هذه العملية، مما يؤدي إلى فقر الدم، مما يسبب التعب والشعور بالبرد.
+- ضيق التنفس: قد يحدث هذا حتى مع بذل الحد الأدنى من الجهد، إما بسبب تراكم السوائل في الرئتين أو فقر الدم.
+- ضعف أو دوخة.
+- ارتباك أو صعوبة في التركيز.
+- حكة شديدة.
+- تورم في اليدين أو القدمين أو الوجه: يحدث هذا لأن السوائل التي يجب أن تفرزها الكلى تبقى في مجرى الدم.
+- طعم معدني في الفم: يحدث هذا بسبب تراكم الفضلات في الدم.
+- رائحة الفم الكريهة.
+- اضطراب في المعدة، وغثيان، وقيء، وفقدان الشهية.
+- بول رغوي: يحدث بسبب وجود البروتين في البول.
+- بول داكن اللون أو دم في البول.
+- آلام أسفل الظهر ليست علامة نموذجية لأمراض الكلى حيث أن الكلى تقع فوق الخصر في الجزء الخلفي من الجسم.
+
+غالبًا ما تظهر هذه الأعراض في مراحل متأخرة، مما يجعل الكشف المبكر من خلال الفحوصات الدورية أمرًا مهمًا.
 """
         },
         "en": {
+          "Please visit a specialist doctor.":
+              "Please visit a specialist doctor.",
           "Yes": "Yes",
           "No": "No",
           "Next": "Next",
@@ -243,16 +252,22 @@ class DataLoacleTranslations extends Translations {
 """,
           //!===========Symptoms======
           "SymptomsValue": """
-- Lack of sufficient urine output
-- Anuria (absence of urine)
-- Heartburn
-- Blood in urine
-- Changes in urine color
-- Pain in the sides
-- Abdominal bloating
-- Fever
-- Swelling
-- Pale skin
+Kidney disease often progresses without noticeable symptoms until it reaches advanced stages. Common symptoms include:
+
+- Persistent fatigue: Healthy kidneys produce erythropoietin, a hormone that creates red blood cells. When kidneys are damaged, this process is disrupted, leading to anemia, which causes fatigue and feeling cold.
+- Shortness of breath: This may occur even with minimal exertion, either due to fluid buildup in the lungs or anemia.
+- Weakness or dizziness.
+- Confusion or difficulty concentrating.
+- Severe itching.
+- Swelling in the hands, feet, or face: This happens because fluids that should be excreted by the kidneys remain in the bloodstream.
+- Metallic taste in the mouth: This occurs due to the accumulation of waste products in the blood.
+- ad breath.
+- Stomach upset, nausea, vomiting, and loss of appetite.
+- Foamy urine: Caused by the presence of protein in the urine.
+- Dark-colored urine or blood in the urine.
+- Lower back pain is not a typical sign of kidney disease since the kidneys are located above the waist at the back of the body.
+
+These symptoms often appear in later stages, making early detection through regular checkups important.
 """
         }
       };

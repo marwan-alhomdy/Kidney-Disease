@@ -1,7 +1,6 @@
 import 'package:kidney_disease/core/constant/image.dart';
 import 'package:kidney_disease/view/prevention_view.dart';
 import 'package:kidney_disease/view/symptoms_view.dart';
-import 'package:kidney_disease/view/treatment_view.dart';
 import 'package:kidney_disease/widget/home/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,7 +8,6 @@ import '../core/Animation/animation_scale_widget.dart';
 import '../core/constant/colors.dart';
 import '../core/locale/locale_controller.dart';
 import 'checkup_view.dart';
-import 'clinical_diagnosis_view.dart';
 
 // ignore: must_be_immutable
 class HomeView extends StatelessWidget {
@@ -21,13 +19,13 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: scecondaryColor,
-          centerTitle: true,
+          // backgroundColor: scecondaryColor,
+          // centerTitle: true,
           title: SizedBox(
             width: 100,
             child: Image.asset(
               "assets/icons/dengue2.png",
-              color: Colors.white,
+              color: scecondaryColor,
               width: 50,
               height: 50,
               // color: mainColor,
@@ -36,7 +34,7 @@ class HomeView extends StatelessWidget {
           actions: [
             IconButton(
                 icon: const Icon(Icons.translate_rounded),
-                color: Colors.white,
+                // color: scecondaryColor,
                 onPressed: () {
                   LocaleController localeController = Get.find();
                   if (localeController.languageCode == "en") {
@@ -49,8 +47,7 @@ class HomeView extends StatelessWidget {
         ),
         //  endDrawer: MyDrawer(),
         body: Container(
-          padding:
-              const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 0),
+          padding: const EdgeInsets.only(left: 15, right: 15, top: 5),
           child: AnimationSlideWidget(
             horizontalOffset: 0,
             verticalOffset: -200,
@@ -95,16 +92,16 @@ final List buttonInfo = [
     "icons": TypeImage.PREVENTION.value(),
     "page": PreventionView.routeName,
   },
-  {
-    "name": TypeImage.TREATMENT.name,
-    "icons": TypeImage.TREATMENT.value(),
-    "page": TreatmentView.routeName,
-  },
-  {
-    "name": TypeImage.CLINICAL_DIAGNOSIS.name,
-    "icons": TypeImage.CLINICAL_DIAGNOSIS.value(),
-    "page": ClinicalDiagnosisView.routeName,
-  },
+  // {
+  //   "name": TypeImage.TREATMENT.name,
+  //   "icons": TypeImage.TREATMENT.value(),
+  //   "page": TreatmentView.routeName,
+  // },
+  // {
+  //   "name": TypeImage.CLINICAL_DIAGNOSIS.name,
+  //   "icons": TypeImage.CLINICAL_DIAGNOSIS.value(),
+  //   "page": ClinicalDiagnosisView.routeName,
+  // },
   {
     "name": TypeImage.SYMPTOMS.name,
     "icons": TypeImage.SYMPTOMS.value(),

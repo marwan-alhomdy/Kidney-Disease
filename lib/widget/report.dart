@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../core/Animation/animation_column_widget.dart';
-import '../core/constant/colors.dart';
 import '../core/utils/style_text.dart';
 
 class ReportWidget extends StatelessWidget {
@@ -17,15 +15,12 @@ class ReportWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: scecondaryColor,
-          foregroundColor: Colors.white,
-          title: Text(
-            title,
-            style: mainTextStyle.copyWith(
-              color: Colors.white,
-            ),
-            //
-          ),
+          // backgroundColor: scecondaryColor,
+          // foregroundColor: Colors.white,
+          scrolledUnderElevation: 0,
+          excludeHeaderSemantics: false,
+          elevation: 0,
+          title: Text(title, style: mainTextStyle),
           centerTitle: true),
       body: SizedBox(
         child: Padding(
