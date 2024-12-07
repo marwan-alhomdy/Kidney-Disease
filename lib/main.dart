@@ -1,15 +1,13 @@
-import 'package:kidney_disease/view/checkup_view.dart';
-import 'package:kidney_disease/view/clinical_diagnosis_view.dart';
-import 'package:kidney_disease/view/prevention_view.dart';
-import 'package:kidney_disease/view/splash.dart';
-import 'package:kidney_disease/view/symptoms_view.dart';
-import 'package:kidney_disease/view/treatment_view.dart';
+import 'package:kidney_disease/view/checkup.view.dart';
+import 'package:kidney_disease/view/prevention.view.dart';
+import 'package:kidney_disease/view/splash.view.dart';
+import 'package:kidney_disease/view/symptoms.view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'core/locale/data_locale_translation.dart';
 import 'core/locale/locale_controller.dart';
 import 'helper/cache_helper.dart';
-import 'view/home_view.dart';
+import 'view/home.view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,13 +33,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: CheckupView.routeName, page: () => const CheckupView()),
         GetPage(
             name: PreventionView.routeName, page: () => const PreventionView()),
-        GetPage(
-            name: TreatmentView.routeName, page: () => const TreatmentView()),
-        GetPage(
-            name: ClinicalDiagnosisView.routeName,
-            page: () => const ClinicalDiagnosisView()),
         GetPage(name: SymptomsView.routeName, page: () => const SymptomsView()),
-        // GetPage(name: ChoseExap.routeName, page: () => ChoseExap()),
       ],
     );
   }

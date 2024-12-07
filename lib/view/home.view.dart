@@ -1,13 +1,13 @@
 import 'package:kidney_disease/core/constant/image.dart';
-import 'package:kidney_disease/view/prevention_view.dart';
-import 'package:kidney_disease/view/symptoms_view.dart';
-import 'package:kidney_disease/widget/home/button_widget.dart';
+import 'package:kidney_disease/view/prevention.view.dart';
+import 'package:kidney_disease/view/symptoms.view.dart';
+import 'package:kidney_disease/widget/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../core/Animation/animation_scale_widget.dart';
 import '../core/constant/colors.dart';
 import '../core/locale/locale_controller.dart';
-import 'checkup_view.dart';
+import 'checkup.view.dart';
 
 // ignore: must_be_immutable
 class HomeView extends StatelessWidget {
@@ -92,16 +92,6 @@ final List buttonInfo = [
     "icons": TypeImage.PREVENTION.value(),
     "page": PreventionView.routeName,
   },
-  // {
-  //   "name": TypeImage.TREATMENT.name,
-  //   "icons": TypeImage.TREATMENT.value(),
-  //   "page": TreatmentView.routeName,
-  // },
-  // {
-  //   "name": TypeImage.CLINICAL_DIAGNOSIS.name,
-  //   "icons": TypeImage.CLINICAL_DIAGNOSIS.value(),
-  //   "page": ClinicalDiagnosisView.routeName,
-  // },
   {
     "name": TypeImage.SYMPTOMS.name,
     "icons": TypeImage.SYMPTOMS.value(),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../core/utils/style_text.dart';
+import '../core/utils/style_text.dart';
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget(

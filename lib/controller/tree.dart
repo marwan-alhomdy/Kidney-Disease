@@ -16,7 +16,9 @@ class KidneyDiagnosisTree {
     ["Are you suffering from pale skin", false]
   ];
 
-  Map<String, dynamic> tree = {};
+  Map<String, dynamic> tree = {
+    
+  };
 
   // التحقق من اكتمال المدخلات
   bool isInputComplete() {
